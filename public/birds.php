@@ -7,23 +7,18 @@
 
   <div id="page">
     <div class="intro">
-      <img class="inset" src="<?php echo url_for('/images/AdobeStock_55807979_thumb.jpeg') ?>" />
-      <h2>Our Inventory of Used Bicycles</h2>
-      <p>Choose the bike you love.</p>
-      <p>We will deliver it to your door and let you try it before you buy it.</p>
+      <h2>Small Sampling of WNC Birds</h2>
     </div>
 
     <table id="inventory">
       <tr>
-        <th>Brand</th>
-        <th>Model</th>
-        <th>Year</th>
-        <th>Category</th>
-        <th>Gender</th>
-        <th>Color</th>
-        <th>Weight</th>
-        <th>Condition</th>
-        <th>Price</th>
+        <th>Common Name</th>
+        <th>Habitat</th>
+        <th>Food</th>
+        <th>Nest Placement</th>
+        <th>Behavior</th>
+        <th>Conservation Level</th>
+        <th>Backyard Tips</th>
       </tr>
 
 <?php
@@ -42,8 +37,8 @@ $bike_array = $parser->parse();
         <td><?php echo h($bike->gender); ?></td>
         <td><?php echo h($bike->color); ?></td>
         <td><?php echo h($bike->weight_kg()) . ' / ' . h($bike->weight_lbs()); ?></td>
-        <td><?php echo h($bike->condition()); ?></td>
-        <td><?php echo h(number_format($bike->price, 2)); ?></td>
+        <!-- <td><?php echo h($bike->condition()); ?></td>
+        <td><?php echo h(number_format($bike->price, 2)); ?></td> -->
       </tr>
       <?php } ?>
 
