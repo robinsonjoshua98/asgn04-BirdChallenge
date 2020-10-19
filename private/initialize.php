@@ -23,6 +23,9 @@
   define("WWW_ROOT", $doc_root);
 
   require_once('functions.php');
+  require_once('classes/birds.class.php');
+  require_once('classes/parsecsv.class.php');
+
 
   // Load class definitions manually
 
@@ -37,7 +40,8 @@
   // Autoload class definitions
   function my_autoload($class) {
     if(preg_match('/\A\w+\Z/', $class)) {
-      include('classes/' . $class . '.class.php');
+      include("classes/birds.class.php");
+      // 'classes/' . $class . '.class.php'
     }
   }
   spl_autoload_register('my_autoload');
